@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aboutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d1b09"/>
+      <stop offset="50%" stop-color="#4a2107"/>
+      <stop offset="100%" stop-color="#1f1105"/>
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#d97706" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#aboutGrad)"/>
+  <circle cx="400" cy="270" r="220" fill="url(#lampGlow)"/>
+
+  <!-- Ornate Border -->
+  <rect x="25" y="25" width="750" height="550" rx="16" fill="none" stroke="#d97706" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="35" y="35" width="730" height="530" rx="12" fill="none" stroke="#f59e0b" stroke-opacity="0.15" stroke-dasharray="8 6" stroke-width="1.5"/>
+
+  <!-- Holy Lingam & Temple Lamp Illustration -->
+  <g transform="translate(400, 260)" stroke="#f59e0b" fill="none" stroke-width="2.5">
+    <!-- Peetha / Base -->
+    <path d="M -90 90 L 90 90 L 110 115 L -110 115 Z" fill="#d97706" fill-opacity="0.25"/>
+    <path d="M -60 55 C -60 40, -40 25, 0 25 C 40 25, 60 40, 60 55 L 75 80 L -75 80 Z" fill="#d97706" fill-opacity="0.4"/>
+    <path d="M 60 60 L 115 60 C 125 60, 125 70, 115 70 L 60 70" stroke-width="3"/>
+    <!-- Shivalinga Cylindrical Form -->
+    <path d="M -42 45 L -42 -25 C -42 -65, 42 -65, 42 -25 L 42 45" fill="#f59e0b" fill-opacity="0.3" stroke-width="3"/>
+    <!-- Sacred Tripundra / Vibhuti lines -->
+    <path d="M -22 -15 L 22 -15" stroke="#fef3c7" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M -24 -7 L 24 -7" stroke="#fef3c7" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M -22 1 L 22 1" stroke="#fef3c7" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Kumkum Bindu -->
+    <circle cx="0" cy="-7" r="3.5" fill="#ef4444" stroke="none"/>
+    
+    <!-- Aura Rays -->
+    <circle cx="0" cy="-25" r="75" stroke="#f59e0b" stroke-opacity="0.2" stroke-dasharray="5 5" stroke-width="1.5"/>
+  </g>
+
+  <!-- Devotional Diya / Oil Lamps at base -->
+  <g transform="translate(300, 410)" fill="#fbbf24" stroke="#d97706" stroke-width="1.5">
+    <ellipse cx="0" cy="10" rx="20" ry="7"/>
+    <path d="M -15 10 Q 0 2 15 10 Q 0 16 -15 10 Z"/>
+    <path d="M 0 3 Q 3 -10 0 -18 Q -3 -10 0 3 Z" fill="#fef08a" stroke="none"/>
+  </g>
+  <g transform="translate(500, 410)" fill="#fbbf24" stroke="#d97706" stroke-width="1.5">
+    <ellipse cx="0" cy="10" rx="20" ry="7"/>
+    <path d="M -15 10 Q 0 2 15 10 Q 0 16 -15 10 Z"/>
+    <path d="M 0 3 Q 3 -10 0 -18 Q -3 -10 0 3 Z" fill="#fef08a" stroke="none"/>
+  </g>
+
+  <!-- Labels -->
+  <rect x="230" y="460" width="340" height="46" rx="23" fill="#1c1917" fill-opacity="0.8" stroke="#f59e0b" stroke-opacity="0.5"/>
+  <text x="400" y="489" fill="#fef3c7" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="600" text-anchor="middle" letter-spacing="1">
+    📷 TEMPLE SANCTUM PHOTO
+  </text>
+  <text x="400" y="535" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" text-anchor="middle" opacity="0.85">
+    Upload: Sri Mahalingeshwara Sanctum / Main Temple View
+  </text>
+</svg>

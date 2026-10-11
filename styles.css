@@ -1,0 +1,817 @@
+/* ==========================================================================
+   Sri Mahalingeshwara Temple, Adyar - Sacred, Modern & Elegant Styles
+   ========================================================================== */
+
+:root {
+    --primary: #d97706;          /* Temple Gold / Deep Amber */
+    --primary-hover: #b45309;    /* Warm Burnished Gold */
+    --accent: #991b1b;           /* Sacred Vermilion / Kumkum Red */
+    --accent-gold: #f59e0b;      /* Bright Temple Gold */
+    --bg-page: #faf8f5;          /* Warm Sandstone Ivory */
+    
+    --text-dark: #1c1917;        /* Charcoal Black */
+    --text-muted: #57534e;       /* Warm Stone Grey */
+    --text-light: #f5f5f4;       /* Warm White */
+    --text-white: #ffffff;
+    
+    --card-radius: 18px;
+    --shadow-sm: 0 4px 14px rgba(40, 20, 5, 0.08);
+    --shadow-md: 0 10px 28px rgba(40, 20, 5, 0.14);
+    --shadow-lg: 0 18px 40px rgba(40, 20, 5, 0.22);
+    
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', 'Outfit', serif;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(28, 25, 23, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 14px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+    transition: var(--transition);
+}
+
+.nav-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--text-white);
+    font-family: 'Cinzel', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    position: relative;
+    padding-left: 20px;
+}
+
+.brand-dot {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--accent-gold);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.7);
+}
+
+.brand-sub {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #fcd34d;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link {
+    color: #e7e5e4;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    letter-spacing: 0.02em;
+}
+
+.nav-link:hover {
+    color: #fbbf24;
+}
+
+.nav-cta {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    color: white;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 9px 20px;
+    border-radius: 24px;
+    border: 1px solid rgba(254, 240, 138, 0.3);
+    box-shadow: 0 3px 12px rgba(217, 119, 6, 0.35);
+    transition: var(--transition);
+}
+
+.nav-cta:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(217, 119, 6, 0.5);
+}
+
+/* ==========================================================================
+   Hero Header
+   ========================================================================== */
+.hero {
+    position: relative;
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 90px 24px;
+    background: url('hero-placeholder.svg') center center/cover no-repeat;
+    background-color: #1c1917;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(30, 20, 10, 0.65) 0%, rgba(15, 10, 5, 0.88) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 840px;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 7px 20px;
+    background: rgba(217, 119, 6, 0.22);
+    border: 1px solid rgba(245, 158, 11, 0.55);
+    color: #fef08a;
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 24px;
+    margin-bottom: 22px;
+    backdrop-filter: blur(8px);
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 5.2vw, 4rem);
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: #e7e5e4;
+    margin-bottom: 34px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.65;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    color: white;
+    border: 1px solid rgba(254, 240, 138, 0.3);
+    box-shadow: 0 4px 16px rgba(217, 119, 6, 0.45);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(217, 119, 6, 0.6);
+}
+
+.btn-outline {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(254, 240, 138, 0.6);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Sections & Content Split
+   ========================================================================== */
+.section {
+    padding: 76px 0;
+}
+
+.content-split {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 46px;
+    border-radius: var(--card-radius);
+    color: white;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(245, 158, 11, 0.15);
+    transition: var(--transition);
+}
+
+.content-split.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Theme Colors for Section Cards - Sacred Temple Hues */
+.section-nature .content-split {
+    background: linear-gradient(135deg, #2b1706 0%, #170b02 100%); /* Deep Temple Mahogany */
+    border-left: 4px solid #f59e0b;
+}
+
+.section-forest .content-split {
+    background: linear-gradient(135deg, #1b2430 0%, #0e141c 100%); /* Sacred Night Slate */
+    border-left: 4px solid #38bdf8;
+}
+
+.section-earth .content-split {
+    background: linear-gradient(135deg, #3d150b 0%, #1f0703 100%); /* Sacred Vermilion / Kumkum Glow */
+    border-left: 4px solid #f97316;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fcd34d;
+    margin-bottom: 10px;
+}
+
+.text-box {
+    flex: 1;
+}
+
+.text-box h2 {
+    font-size: 2.15rem;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+    color: #fef3c7;
+}
+
+.text-box p {
+    font-size: 1.05rem;
+    line-height: 1.72;
+    margin-bottom: 14px;
+    color: #e7e5e4;
+}
+
+.clean-list {
+    list-style: none;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.clean-list li {
+    position: relative;
+    padding-left: 28px;
+    font-size: 0.98rem;
+    color: #f5f5f4;
+}
+
+.clean-list li::before {
+    content: "🕉";
+    position: absolute;
+    left: 0;
+    color: #fbbf24;
+    font-size: 0.95rem;
+}
+
+.image-box {
+    flex: 1;
+    height: 380px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.04);
+}
+
+/* ==========================================================================
+   Darshan & Timings Schedule Section
+   ========================================================================== */
+.section-timings {
+    background-color: #f5f0e8;
+    border-top: 1px solid rgba(217, 119, 6, 0.12);
+    border-bottom: 1px solid rgba(217, 119, 6, 0.12);
+}
+
+.timings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 34px;
+}
+
+.timing-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 26px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(217, 119, 6, 0.15);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.timing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(217, 119, 6, 0.4);
+}
+
+.timing-card.highlight {
+    background: linear-gradient(180deg, #ffffff 0%, #fffbeb 100%);
+    border: 1.5px solid #d97706;
+    box-shadow: 0 8px 24px rgba(217, 119, 6, 0.15);
+}
+
+.timing-icon {
+    font-size: 2.2rem;
+    margin-bottom: 14px;
+}
+
+.timing-card h3 {
+    font-size: 1.4rem;
+    color: #1c1917;
+    margin-bottom: 8px;
+}
+
+.timing-hours {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+    align-self: flex-start;
+}
+
+.timing-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.93rem;
+    color: var(--text-muted);
+}
+
+.timing-list li {
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #e7e5e4;
+}
+
+.timing-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.timing-list strong {
+    color: #1c1917;
+}
+
+.devotee-guidelines {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px 28px;
+    border-left: 4px solid var(--accent);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.guideline-badge {
+    background: #fee2e2;
+    color: #991b1b;
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 6px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.devotee-guidelines p {
+    color: #44403c;
+    font-size: 0.94rem;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Photo Gallery Grid
+   ========================================================================== */
+.section-gallery {
+    background-color: #faf8f5;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 42px;
+}
+
+.section-header .section-label {
+    color: #b45309;
+}
+
+.section-header h2 {
+    font-size: 2.25rem;
+    color: #1c1917;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-card {
+    position: relative;
+    height: 270px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    border: 1px solid rgba(217, 119, 6, 0.18);
+    background-color: #1c1917;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 16px;
+    background: linear-gradient(180deg, transparent 0%, rgba(20, 10, 5, 0.92) 100%);
+    color: #fef3c7;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-info {
+    transform: translateY(0);
+}
+
+.gallery-note {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 24px;
+}
+
+/* ==========================================================================
+   Location & Map Section
+   ========================================================================== */
+.section-location {
+    padding-bottom: 84px;
+}
+
+.location-card {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    background: linear-gradient(135deg, #241407 0%, #120a03 100%);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    color: white;
+}
+
+.map-frame {
+    min-height: 440px;
+    background-color: #e2e8f0;
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.location-content {
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.location-content .section-label {
+    color: #fcd34d;
+}
+
+.location-content h2 {
+    font-size: 2.1rem;
+    color: #fef3c7;
+    margin-bottom: 14px;
+}
+
+.location-content p {
+    font-size: 1rem;
+    line-height: 1.68;
+    color: #e7e5e4;
+    margin-bottom: 14px;
+}
+
+.loc-details {
+    margin: 16px 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.detail-item {
+    font-size: 0.92rem;
+    color: #f5f5f4;
+}
+
+.detail-item strong {
+    color: #fcd34d;
+    margin-right: 6px;
+}
+
+.location-btn {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 13px 26px;
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: var(--transition);
+    border: 1px solid rgba(254, 240, 138, 0.3);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.location-btn:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(217, 119, 6, 0.45);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+    background-color: #1c1917;
+    color: #a8a29e;
+    padding: 32px 0;
+    border-top: 1px solid rgba(245, 158, 11, 0.18);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.92rem;
+}
+
+.footer-left p {
+    color: #f5f5f4;
+    margin-bottom: 4px;
+}
+
+.footer-sub {
+    font-size: 0.84rem;
+    color: #a8a29e;
+}
+
+.scroll-top {
+    background-color: transparent;
+    color: #e7e5e4;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 9px 20px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.scroll-top:hover {
+    background: #d97706;
+    color: white;
+    border-color: #d97706;
+}
+
+/* ==========================================================================
+   Image Lightbox Modal
+   ========================================================================== */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(15, 10, 5, 0.94);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px;
+    backdrop-filter: blur(8px);
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    color: #fef08a;
+    font-size: 38px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+    color: var(--primary);
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+    object-fit: contain;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.lightbox p {
+    color: #fef3c7;
+    margin-top: 16px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+@media (max-width: 992px) {
+    .content-split,
+    .content-split.reverse {
+        flex-direction: column;
+        gap: 28px;
+        padding: 34px 24px;
+    }
+
+    .image-box {
+        width: 100%;
+        height: 320px;
+    }
+
+    .timings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .location-card {
+        grid-template-columns: 1fr;
+    }
+
+    .map-frame {
+        min-height: 340px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-menu {
+        display: none; /* Mobile menu */
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .devotee-guidelines {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .location-content {
+        padding: 30px 20px;
+    }
+}
